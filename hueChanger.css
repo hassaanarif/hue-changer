@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(22, 44, 33, 1);
+}
+
+.navigation {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  color: aliceblue;
+}
+
+.nav-items {
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .navigation {
+    height: 10vh;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .nav-items {
+    margin: 2rem;
+  }
+}

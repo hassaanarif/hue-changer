@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="website.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <div class="nav-items">Home</div>
+      <div class="nav-items">Gallery</div>
+      <div class="nav-items">About Us</div>
+      <div class="nav-items">Contact</div>
+    </div>
+
+    <div>
+      <input
+        type="range"
+        value="50"
+        id="slider"
+        title="Brightness-slider"
+        oninput="sliderFunction()"
+      />
+    </div>
+  </body>
+  <script>
+    function sliderFunction(e) {
+      let slider = document.getElementById("slider");
+      let body = document.getElementsByTagName("body")[0];
+      let hueValue = slider.value / 100;
+      body.style.backgroundColor = `rgba(22, 44, 33, ${hueValue})`;
+      console.log(slider.value);
+      console.log(hueValue);
+    }
+  </script>
+</html>
